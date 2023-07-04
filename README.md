@@ -29,8 +29,7 @@
 </ol>
 <h2>Usage</h2>
 <p>To use the CropView - Compose Library in your app:</p>
-<pre><code class="language-kotlin">
-@Composable
+<pre><code class="language-kotlin">@Composable
   fun MyView() {
     Crop(
         modifier = modifier,
@@ -39,34 +38,32 @@
     ) {
         // your content
     }
-  }
-</code></pre>
+  }</code></pre>
 <p> <i>cropShape</i> above is an CropShape which is an interface that defines state of the crop shape and
 the shape's view. For now, there are two implementations: 
 <h3>GridCrop</h3>
 <p>GridCrop is a crop shape that draws a grid on the crop view. As state, it uses a GridCropState which is a class that holds the state of the grid. </p>
-<pre><code class="language-kotlin">
-    Crop(
-        cropShape = rememberGridCrop()
-        ...
-    ) {
-        ...
-    }
+
+<pre><code class="language-kotlin">Crop(
+ cropShape = rememberGridCrop()
+  ...
+ ) {
+  ...
+}</code></pre>
+<p>Additionally, you can set a size ratio to <i>GridCropState</i>.</p>
+<pre><code class="language-kotlin">val cropShape = rememberGridCrop()
+cropState.setAspectRatio(Ratio.RATIO_16_9)
 </code></pre>
 <h3>CircleCrop</h3>
 <p>CircleCrop is a crop shape that draws a circle on the crop view. As state, it uses a CircleCropState which is a class that holds the state of the circle. </p>
-<pre>
-<code>
-    Crop(
-        cropShape = rememberCircleCrop()
-        ...
-    ) {
-        ...
-    }
-</code>
-</pre>
+<pre><code> Crop(
+    cropShape = rememberCircleCrop()
+    ...
+ ) {
+    ...
+ }</code></pre>
 
-<p>After defining Crop view, it's content and it's shape, the crop view will handle the rest. It will draw the shape on the view and will handle the touch events, resizing and moving the shape.
+<p>After defining Crop view, it's content, and it's shape, the crop view will handle the rest. It will draw the shape on the view and will handle the touch events, resizing and moving the shape.
 Whenever you need to crop the image, you can call <i>CropState.crop(Bitmap)</i> method to crop the image. </p>
 
 <p><b>Note:</b> Both <i>rememberGridCrop</i> and <i>rememberCircleCrop</i> let you define a size/radius (current) and a minimum size/radius. Crop view will prevent the shape from getting smaller than the minimum size/radius.
