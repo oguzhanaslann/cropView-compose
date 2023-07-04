@@ -6,7 +6,7 @@ import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.Dp
 
 @Composable
-fun Dp.toPx(): Float {
+internal fun Dp.toPx(): Float {
     val density = Density(LocalContext.current)
     return with(density) { toPx() }
 }

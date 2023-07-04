@@ -65,7 +65,7 @@ fun Crop(
 
 @Preview(showBackground = true)
 @Composable
-internal fun previewCrop() {
+private fun previewCrop() {
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
