@@ -23,7 +23,7 @@
  <li>Add the library to your project's build.gradle file.
     <br/>
     <!-- version tag -->
-    [![](https://www.jitpack.io/v/oguzhanaslann/CropView-Compose.svg)](https://www.jitpack.io/#oguzhanaslann/CropView-Compose)>
+    [![](https://www.jitpack.io/v/oguzhanaslann/CropView-Compose.svg)](https://www.jitpack.io/#oguzhanaslann/CropView-Compose)
 </li>
     <pre><code class="language-groovy">dependencies {
     implementation "com.oguzhanaslann.cropview:cropview-compose:1.0.0"
