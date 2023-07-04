@@ -1,5 +1,9 @@
 <h1>CropView - Compose</h1>
 <p>The <b>CropView - Compose</b> a customizable library that allows you to easily implement image cropping functionality in your Android applications.</p>
+<!-- sample gif  size limited -->
+<p align="center">
+  <img src="https://github.com/oguzhanaslann/Andromedia/blob/master/sample/grid_sample.gif" width="350" title="hover text">
+
 <h2>Features</h2>
 <ul>
   <li><b>Image cropping:</b> Provides a user-friendly interface to crop images within your app.</li>
@@ -77,7 +81,7 @@ expect you to provide state of the shape and content view of the shape. It's wor
 that implements CropShapeState interface.<i>CropState</i> mainly expects you to provide a resize function, which is called when
 the user engages with the shape.</p>
 
-<p>Also, if your shape by nature is an rectangle or Circle, you can use built-in <i>RectangleCropShapeState</i> and <i>CircularCropShapeState</i> classes.
+<p>Also, if your shape by nature is a rectangle or Circle, you can use built-in <i>RectangleCropShapeState</i> and <i>CircularCropShapeState</i> classes.
 They provide proper abstraction for their corresponding shapes and also implement <i>crop</i> function for you. </p>  
 
 <h2>Examples</h2>
