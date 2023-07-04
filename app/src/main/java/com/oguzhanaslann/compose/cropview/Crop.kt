@@ -1,6 +1,8 @@
 package com.oguzhanaslann.compose.cropview
 
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.EnterTransition
+import androidx.compose.animation.ExitTransition
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -26,6 +28,8 @@ fun Crop(
     modifier: Modifier = Modifier,
     cropShape: CropShape = GridCrop(rememberGridCropState()),
     drawGrid: Boolean = true,
+    enter: EnterTransition = fadeIn(),
+    exit: ExitTransition = fadeOut(),
     content: @Composable () -> Unit,
 ) {
     val cropState = cropShape.state
@@ -55,8 +59,8 @@ fun Crop(
                     height = maxHeight
                 )
                 .align(Alignment.Center),
-            enter = fadeIn(),
-            exit = fadeOut()
+            enter = enter,
+            exit = exit
         ) {
             cropShape.content(maxWidthPx, maxHeightPx)
         }
