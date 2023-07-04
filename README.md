@@ -20,13 +20,9 @@
     <pre><code class="language-groovy">repositories {
    maven { url 'https://www.jitpack.io' }
 }</code></pre>
- <li>Add the library to your project's build.gradle file.
-    <br/>
-    <!-- version tag -->
-    [![](https://www.jitpack.io/v/oguzhanaslann/CropView-Compose.svg)](https://www.jitpack.io/#oguzhanaslann/CropView-Compose)
-</li>
+ <li>Add the library to your project's build.gradle file.</li>
     <pre><code class="language-groovy">dependencies {
-    implementation "com.oguzhanaslann.cropview:cropview-compose:1.0.0"
+    implementation "com.oguzhanaslann.cropview:cropview-compose:0.0.1-alpha"
 }</code></pre>
   <li>Sync the project with the Gradle files to fetch the library and its dependencies.</li>
   <li>Start using the library in your code by importing the necessary classes.</li>
