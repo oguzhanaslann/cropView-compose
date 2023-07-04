@@ -1,5 +1,6 @@
 <h1>CropView - Compose</h1>
-<p>The <b>CropView - Compose</b> a customizable library that allows you to easily implement image cropping functionality in your Android applications.</p>
+<p>The <b>CropView - Compose</b> a customizable library that allows you to easily implement image cropping functionality in your Android applications. 
+It is pure Compose library and lightweight.</p>
 <!-- sample gif  size limited -->
 <p align="center">
   <img src="https://github.com/oguzhanaslann/Andromedia/blob/master/sample/grid_sample.gif" width="350" title="hover text">
