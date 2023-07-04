@@ -21,8 +21,9 @@
    maven { url 'https://www.jitpack.io' }
 }</code></pre>
  <li>Add the library to your project's build.gradle file.
+    <br/>
     <!-- version tag -->
-    <p>Replace <b>Tag</b> with the latest version number: <a href="implementation 'com.github.oguzhanaslann:CropView-Compose:0.0.1-alpha'">![Tag](https://img.shields.io/github/v/tag/oguzhanaslann/CropView-Compose?label=version)</a></p>
+    [![](https://www.jitpack.io/v/oguzhanaslann/CropView-Compose.svg)](https://www.jitpack.io/#oguzhanaslann/CropView-Compose)>
 </li>
     <pre><code class="language-groovy">dependencies {
     implementation "com.oguzhanaslann.cropview:cropview-compose:1.0.0"
