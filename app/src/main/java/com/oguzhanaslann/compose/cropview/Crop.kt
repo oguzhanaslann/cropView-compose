@@ -20,14 +20,13 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import com.oguzhanaslann.compose.cropview.cropShape.CropShape
-import com.oguzhanaslann.compose.cropview.cropShape.grid.GridCrop
-import com.oguzhanaslann.compose.cropview.cropShape.grid.rememberGridCropState
+import com.oguzhanaslann.compose.cropview.cropShape.grid.rememberGridCrop
 
 @Composable
 fun Crop(
     modifier: Modifier = Modifier,
-    cropShape: CropShape = GridCrop(rememberGridCropState()),
-    drawGrid: Boolean = true,
+    cropShape: CropShape = rememberGridCrop(),
+    draw: Boolean = true,
     enter: EnterTransition = fadeIn(),
     exit: ExitTransition = fadeOut(),
     content: @Composable () -> Unit,
@@ -52,7 +51,7 @@ fun Crop(
 
         content()
         AnimatedVisibility(
-            visible = drawGrid,
+            visible = draw,
             modifier = Modifier
                 .size(
                     width = maxWidth,

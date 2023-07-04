@@ -6,9 +6,12 @@ import androidx.compose.ui.geometry.Size
 import com.oguzhanaslann.compose.cropview.cropShape.CropShape
 import com.oguzhanaslann.compose.cropview.cropShape.cropState.CropState
 
-class GridCrop(private val gridCropState : GridCropState) : CropShape {
+class GridCrop(
+    private val gridCropState: GridCropState,
+) : CropShape {
     override val state: CropState
         get() = gridCropState
+
     @Composable
     override fun content(maxWidthPx: Float, maxHeightPx: Float) {
         GridView(
@@ -33,7 +36,7 @@ class GridCrop(private val gridCropState : GridCropState) : CropShape {
 
 @Composable
 fun rememberGridCrop(
-    gridCropState: GridCropState = rememberGridCropState()
+    gridCropState: GridCropState = rememberGridCropState(),
 ) = remember(gridCropState) {
     GridCrop(gridCropState)
 }

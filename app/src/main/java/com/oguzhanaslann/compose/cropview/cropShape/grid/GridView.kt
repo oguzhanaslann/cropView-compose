@@ -21,6 +21,7 @@ internal fun GridView(
     cropState: RectangleCropShapeState,
     maxSize: Size,
     lineWidth: Dp = 2.dp,
+    gridLineColor : Color = Color.White,
     onDrawGrid: DrawScope.() -> Unit = {},
 ) {
     val center = remember(cropState.topLeft, cropState.size) {
@@ -44,14 +45,14 @@ internal fun GridView(
         val lineWidthPx = lineWidth.toPx()
 
         drawRect(
-            color = Color.White,
+            color = gridLineColor,
             topLeft = cropState.topLeft,
             size = cropState.size,
             style = Stroke(lineWidthPx)
         )
 
         drawLine(
-            color = Color.White,
+            color = gridLineColor,
             strokeWidth = lineWidthPx,
             start = Offset(
                 x = cropState.topLeft.x + cropState.size.width / 3,
@@ -64,7 +65,7 @@ internal fun GridView(
         )
 
         drawLine(
-            color = Color.White,
+            color = gridLineColor,
             strokeWidth = lineWidthPx,
             start = Offset(
                 x = cropState.topLeft.x + cropState.size.width / 3 * 2,
@@ -77,7 +78,7 @@ internal fun GridView(
         )
 
         drawLine(
-            color = Color.White,
+            color = gridLineColor,
             strokeWidth = lineWidthPx,
             start = Offset(
                 x = center.x - cropState.size.width / 2,
@@ -90,7 +91,7 @@ internal fun GridView(
         )
 
         drawLine(
-            color = Color.White,
+            color = gridLineColor,
             strokeWidth = lineWidthPx,
             start = Offset(
                 x = center.x - cropState.size.width / 2,
