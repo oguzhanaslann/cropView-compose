@@ -16,11 +16,14 @@
 <h2>Installation</h2>
 <p>To use the CropView - Compose Library in your Android project, follow these steps:</p>
 <ol>
-    <li>Add the JCenter repository to your project's build.gradle file.</li>
+    <li>Add the Jitpack repository to your project's build.gradle file.</li>
     <pre><code class="language-groovy">repositories {
-    jcenter()
+   maven { url 'https://www.jitpack.io' }
 }</code></pre>
- <li>Add the library to your project's build.gradle file.</li>
+ <li>Add the library to your project's build.gradle file.
+    <!-- version tag -->
+    <p>Replace <b>Tag</b> with the latest version number: <a href="implementation 'com.github.oguzhanaslann:CropView-Compose:0.0.1-alpha'">![Tag](https://img.shields.io/github/v/tag/oguzhanaslann/CropView-Compose?label=version)</a></p>
+</li>
     <pre><code class="language-groovy">dependencies {
     implementation "com.oguzhanaslann.cropview:cropview-compose:1.0.0"
 }</code></pre>
