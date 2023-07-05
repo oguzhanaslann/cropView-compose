@@ -88,6 +88,6 @@ They provide proper abstraction for their corresponding shapes and also implemen
 <h2>Examples</h2>
 <p>You can find a sample app in <a href="https://github.com/oguzhanaslann/Andromedia">Andromedia</a> repository.</p>
 <h2>Contribution</h2>
-<p>Contributions to the Android Image Crop View Library are welcome! If you encounter any bugs, have feature requests, or would like to contribute improvements feel free to create an issue or open a pull request. If you would like to contribute.</p>
+<p>Contributions to the CropView - Compose are welcome! If you encounter any bugs, have feature requests, or would like to contribute improvements feel free to create an issue or open a pull request. If you would like to contribute.</p>
 <h2>License</h2>
 <p>The CropView - Compose Library is released under the <a href="https://github.com/oguzhanaslann/CropView-Compose/blob/master/LICENSE">MIT License</a>. Please review the license file for more information.</p>
