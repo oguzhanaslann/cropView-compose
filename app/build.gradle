@@ -22,7 +22,6 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            matchingFallbacks = ['debug', 'release']
         }
     }
     compileOptions {
@@ -75,7 +74,6 @@ afterEvaluate {
                 groupId = 'com.oguzhanaslann.cropview-compose'
                 artifactId = 'cropview-compose'
                 version = versionStr
-                from components.release
             }
         }
 
