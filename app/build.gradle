@@ -1,8 +1,10 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'maven-publish'
+//    id 'maven-publish'
 }
+
+def versionStr = "1.0"
 
 android {
     namespace 'com.oguzhanaslann.cropview'
@@ -13,7 +15,7 @@ android {
         minSdk 24
         targetSdk 33
         versionCode 1
-        versionName "1.0"
+        versionName versionStr
     }
 
     buildTypes {
@@ -35,12 +37,31 @@ android {
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion '1.4.6'
+        kotlinCompilerExtensionVersion '1.5.1'
     }
 
     testFixtures {
         enable = true
     }
+
+//    publishing {
+//        singleVariant('release') {
+//            withSourcesJar()
+//        }
+//
+//        publications {
+//            release(MavenPublication) {
+//                groupId = 'com.oguzhanaslann.cropview-compose'
+//                artifactId = 'cropview-compose'
+//                version = versionStr
+//
+//                afterEvaluate {
+//                    from components.release
+//                }
+//            }
+//        }
+//
+//    }
 }
 
 dependencies {
@@ -49,7 +70,7 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1'
     implementation 'androidx.activity:activity-compose:1.7.2'
 
-    def composeBom = platform('androidx.compose:compose-bom:2023.04.01')
+    def composeBom = platform('androidx.compose:compose-bom:2023.06.01')
     implementation composeBom
     androidTestImplementation composeBom
 
