@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'maven-publish'
 }
@@ -11,7 +11,6 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.oguzhanaslann.cropview"
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -71,12 +70,12 @@ afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
-                groupId = 'com.oguzhanaslann.cropview-compose'
+                groupId = 'com.github.oguzhanaslann'
                 artifactId = 'cropview-compose'
                 version = versionStr
+                from components.release
             }
         }
-
     }
 }
 
