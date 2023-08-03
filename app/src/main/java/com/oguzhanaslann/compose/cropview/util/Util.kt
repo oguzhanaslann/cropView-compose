@@ -1,7 +1,11 @@
 package com.oguzhanaslann.compose.cropview.util
 
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.unit.Density
+import androidx.compose.ui.unit.Dp
 
 
 internal fun boundedNewX(
@@ -114,4 +118,11 @@ internal fun isHeightLessThanMinHeight(
     minHeight: Float,
 ): Boolean {
     return targetHeight < minHeight
+}
+
+
+@Composable
+fun Dp.toPx(): Float {
+    val density = Density(LocalContext.current)
+    return with(density) { toPx() }
 }

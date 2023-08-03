@@ -21,6 +21,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import com.oguzhanaslann.compose.cropview.cropShape.CropShape
 import com.oguzhanaslann.compose.cropview.cropShape.grid.rememberGridCrop
+import com.oguzhanaslann.compose.cropview.util.toPx
 
 @Composable
 fun Crop(

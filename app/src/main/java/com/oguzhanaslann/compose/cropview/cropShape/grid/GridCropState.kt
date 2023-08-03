@@ -20,7 +20,6 @@ import com.oguzhanaslann.compose.cropview.isMiddle
 import com.oguzhanaslann.compose.cropview.isRightEdge
 import com.oguzhanaslann.compose.cropview.isTopLeftCorner
 import com.oguzhanaslann.compose.cropview.isTopRightCorner
-import com.oguzhanaslann.compose.cropview.toPx
 import com.oguzhanaslann.compose.cropview.util.boundedHeight
 import com.oguzhanaslann.compose.cropview.util.boundedNewX
 import com.oguzhanaslann.compose.cropview.util.boundedNewY
@@ -29,6 +28,7 @@ import com.oguzhanaslann.compose.cropview.util.isHeightBiggerThanAllowedHeight
 import com.oguzhanaslann.compose.cropview.util.isHeightLessThanMinHeight
 import com.oguzhanaslann.compose.cropview.util.isWidthBiggerThanAllowedWidth
 import com.oguzhanaslann.compose.cropview.util.isWidthLessThanMinWidth
+import com.oguzhanaslann.compose.cropview.util.toPx
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
@@ -40,7 +40,7 @@ class GridCropState(
     val minSize: Size,
 ) : RectangleCropShapeState {
     private val _topLeft = mutableStateOf(topLeft)
-    override    val topLeft by _topLeft
+    override val topLeft by _topLeft
 
     private val _size = mutableStateOf(size)
     override var size: Size by _size
@@ -59,7 +59,7 @@ class GridCropState(
     override fun resize(
         change: PointerInputChange,
         dragAmount: Offset,
-        maxSize: Size
+        maxSize: Size,
     ): PointerInputScope.() -> Unit = {
 
         val xDp = change.position.x.toDp()
